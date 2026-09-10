@@ -19,10 +19,10 @@ export default function ServicesPage() {
         title="Professional services that keep systems working"
         description="Installation, configuration, support and AMC are a major part of how Tirunova delivers — not an afterthought after the sale."
       />
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-5 md:grid-cols-2">
           {services.map((service, index) => (
-            <article key={service.title} className="rounded-3xl border border-line p-7">
+            <article key={service.title} className="min-w-0 rounded-3xl border border-line p-5 sm:p-7">
               <p className="text-xs font-semibold tracking-[0.18em] text-orange">
                 {String(index + 1).padStart(2, "0")}
               </p>

@@ -87,8 +87,8 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-line bg-white p-8">
-        <h2 className="font-heading text-2xl font-semibold text-navy">Enquiry ready to send</h2>
+      <div className="rounded-3xl border border-line bg-white p-6 sm:p-8">
+        <h2 className="font-heading text-2xl font-semibold text-pretty text-navy">Enquiry ready to send</h2>
         <p className="mt-3 text-muted">
           Your email app should open with the enquiry details. If it does not, call or message us
           directly and we will respond promptly.
@@ -96,13 +96,13 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <a
             href={site.phones[0].href}
-            className="inline-flex items-center justify-center rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white sm:w-auto"
           >
             Call {site.phones[0].display}
           </a>
           <a
             href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(enquiryBody)}`}
-            className="inline-flex items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-semibold text-navy"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-semibold text-navy sm:w-auto"
             target="_blank"
             rel="noreferrer"
           >
@@ -122,7 +122,7 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
             required
             value={form.name}
             onChange={(event) => update("name", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
             autoComplete="name"
           />
         </label>
@@ -131,7 +131,7 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
           <input
             value={form.company}
             onChange={(event) => update("company", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
             autoComplete="organization"
           />
         </label>
@@ -141,7 +141,7 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
             required
             value={form.phone}
             onChange={(event) => update("phone", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
             autoComplete="tel"
           />
         </label>
@@ -152,7 +152,7 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
             type="email"
             value={form.email}
             onChange={(event) => update("email", event.target.value)}
-            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+            className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
             autoComplete="email"
           />
         </label>
@@ -163,7 +163,7 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
           required
           value={form.requirement}
           onChange={(event) => update("requirement", event.target.value)}
-          className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+          className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
         >
           <option value="">Select a requirement</option>
           {requirements.map((item) => (
@@ -180,13 +180,13 @@ export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: 
           rows={5}
           value={form.message}
           onChange={(event) => update("message", event.target.value)}
-          className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none focus:border-blue"
+          className="mt-2 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink outline-none focus:border-blue"
         />
       </label>
       {error ? <p className="mt-4 text-sm text-orange-600">{error}</p> : null}
       <button
         type="submit"
-        className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600 sm:w-auto"
+        className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange-600 sm:w-auto"
       >
         Send Enquiry
       </button>

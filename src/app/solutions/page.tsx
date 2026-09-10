@@ -20,15 +20,15 @@ export default function SolutionsPage() {
         title="Integrated technology solutions under one roof"
         description="Tirunova Technologies — your single technology partner for IT, security, software and solar solutions. Explore each practice in detail rather than a long product catalogue on one page."
       />
-      <section className="py-16 sm:py-20">
-        <Container className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <Container className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {solutions.map((solution, index) => {
             const Icon = solutionIcons[index];
             return (
               <Link
                 key={solution.slug}
                 href={`/solutions/${solution.slug}`}
-                className="rounded-3xl border border-line p-7 transition-shadow hover:shadow-lg"
+                className="min-w-0 rounded-3xl border border-line p-5 transition-shadow hover:shadow-lg sm:p-7"
               >
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 text-blue">
                   <Icon className="h-6 w-6" />

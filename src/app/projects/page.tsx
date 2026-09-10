@@ -19,9 +19,9 @@ export default function ProjectsPage() {
         title="Work that should be shown with real installations"
         description="This portfolio is structured for actual project photographs. Real site images build more trust than stock photography, and will be published here as documented installations become available."
       />
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
             {projectCategories.map((category) => (
               <article
                 key={category}

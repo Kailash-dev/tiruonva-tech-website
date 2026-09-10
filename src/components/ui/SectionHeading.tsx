@@ -18,7 +18,7 @@ export function SectionHeading({
       {eyebrow ? (
         <p
           className={cn(
-            "mb-3 text-xs font-semibold uppercase tracking-[0.22em]",
+            "mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs sm:tracking-[0.22em]",
             light ? "text-orange-500" : "text-orange",
           )}
         >
@@ -27,7 +27,7 @@ export function SectionHeading({
       ) : null}
       <h2
         className={cn(
-          "font-heading text-3xl font-semibold tracking-tight sm:text-4xl",
+          "font-heading text-2xl font-semibold tracking-tight text-pretty sm:text-3xl lg:text-4xl",
           light ? "text-white" : "text-navy",
         )}
       >

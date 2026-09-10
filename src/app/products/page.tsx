@@ -19,10 +19,10 @@ export default function ProductsPage() {
         title="Security and technology products"
         description="A focused product catalogue organised by category. We recommend solutions according to requirement, performance and budget — then install and support them properly."
       />
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-6 lg:grid-cols-2">
           {productGroups.map((group) => (
-            <article key={group.title} className="rounded-3xl border border-line p-7">
+            <article key={group.title} className="min-w-0 rounded-3xl border border-line p-5 sm:p-7">
               <h2 className="font-heading text-2xl font-semibold text-navy">{group.title}</h2>
               <ul className="mt-5 grid gap-2 sm:grid-cols-2">
                 {group.items.map((item) => (

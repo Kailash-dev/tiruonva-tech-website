@@ -17,10 +17,10 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
         title={solution.headline}
         description={solution.description}
       />
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
-            <h2 className="font-heading text-3xl font-semibold text-navy">{solution.name}</h2>
+          <div className="min-w-0">
+            <h2 className="font-heading text-2xl font-semibold text-pretty text-navy sm:text-3xl">{solution.name}</h2>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {solution.items.map((item) => (
                 <li
@@ -32,7 +32,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
               ))}
             </ul>
             {solution.slug === "solar-energy" ? (
-              <div className="mt-10 rounded-3xl border border-line p-6">
+              <div className="mt-10 rounded-3xl border border-line p-5 sm:p-6">
                 <h3 className="font-heading text-xl font-semibold text-navy">Solar brands</h3>
                 <p className="mt-2 text-sm text-muted">
                   Where applicable, we can supply and install systems using brands we currently
@@ -45,7 +45,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
               <Button href="/contact">{solution.cta}</Button>
             </div>
           </div>
-          <aside className="rounded-3xl bg-navy p-8 text-white">
+          <aside className="rounded-3xl bg-navy p-6 text-white sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
               Related solutions
             </p>

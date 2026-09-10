@@ -21,24 +21,28 @@ export default function AboutPage() {
         description="Founded on 7 June 2024 by Deependra Gadwal, Tirunova Technologies was established with a vision to provide businesses and individuals with dependable, integrated and future-ready technology solutions."
       />
 
-      <section className="py-16 sm:py-20">
-        <Container className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <Container className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
           <Image
             src="/logo.jpg"
             alt={`${site.name} logo`}
             width={1024}
             height={1024}
-            className="mx-auto w-full max-w-sm object-contain"
+            className="mx-auto w-full max-w-[16rem] object-contain sm:max-w-sm"
           />
-          <div>
-            <p className="text-lg leading-8 text-ink/85">
+          <div className="min-w-0">
+            <p className="text-base leading-7 text-ink/85 sm:text-lg sm:leading-8">
               We bring together IT infrastructure, networking, cybersecurity, surveillance,
               software, cloud computing, security systems and solar solutions under one technology
               partner.
             </p>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-              Consultation → Design → Supply → Installation → Configuration → Support → AMC
-            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {approach.map((step) => (
+                <span key={step} className="rounded-full bg-surface px-3 py-2 text-sm font-medium text-navy">
+                  {step}
+                </span>
+              ))}
+            </div>
             <dl className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl bg-surface p-5">
                 <dt className="text-xs uppercase tracking-[0.16em] text-muted">Founded</dt>
@@ -56,16 +60,16 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-y border-line bg-surface py-16 sm:py-20">
-        <Container className="grid gap-8 lg:grid-cols-2">
-          <article className="rounded-3xl bg-white p-8">
+      <section className="border-y border-line bg-surface py-12 sm:py-16 lg:py-20">
+        <Container className="grid gap-6 sm:gap-8 lg:grid-cols-2">
+          <article className="rounded-3xl bg-white p-6 sm:p-8">
             <h2 className="font-heading text-2xl font-semibold text-navy">Our Vision</h2>
             <p className="mt-4 leading-7 text-muted">
               To become a trusted technology solutions partner delivering innovative, secure and
               scalable solutions for businesses and communities.
             </p>
           </article>
-          <article className="rounded-3xl bg-white p-8">
+          <article className="rounded-3xl bg-white p-6 sm:p-8">
             <h2 className="font-heading text-2xl font-semibold text-navy">Our Mission</h2>
             <p className="mt-4 leading-7 text-muted">
               To simplify technology for our customers by providing reliable products, professional
@@ -75,14 +79,14 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading eyebrow="Values" title="What we stand for" />
           <div className="mt-8 flex flex-wrap gap-3">
             {values.map((value) => (
               <span
                 key={value}
-                className="rounded-full border border-line px-5 py-2 text-sm font-medium text-navy"
+                className="rounded-full border border-line px-4 py-2 text-sm font-medium text-navy sm:px-5"
               >
                 {value}
               </span>
@@ -91,17 +95,17 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-navy py-16 text-white sm:py-20">
-        <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section className="bg-navy py-12 text-white sm:py-16 lg:py-20">
+        <Container className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-10">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-orange-500">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-orange-500 sm:text-xs sm:tracking-[0.22em]">
               Founder message
             </p>
-            <h2 className="font-heading mt-3 text-3xl font-semibold">
+            <h2 className="font-heading mt-3 text-2xl font-semibold text-pretty sm:text-3xl">
               A note from {site.founder.name}
             </h2>
           </div>
-          <blockquote className="text-lg leading-8 text-white/80">
+          <blockquote className="text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
             Tirunova was founded to give businesses and families a single, accountable technology
             partner — not a fragmented set of vendors. We focus on quality products, professional
             implementation and relationships that last after handover. If we can make technology
@@ -113,7 +117,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading eyebrow="Strengths" title="Why Tirunova Technologies" />
           <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -122,13 +126,6 @@ export default function AboutPage() {
                 <h3 className="font-heading text-xl font-semibold text-navy">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted">{item.description}</p>
               </article>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-wrap gap-2">
-            {approach.map((step) => (
-              <span key={step} className="rounded-full bg-surface px-4 py-2 text-sm text-navy">
-                {step}
-              </span>
             ))}
           </div>
         </Container>

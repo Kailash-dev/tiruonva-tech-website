@@ -31,10 +31,10 @@ export default async function ContactPage({
         title="Let's discuss your requirement"
         description="Get a free consultation and site survey. Tell us what you need and our team will help you plan the right solution."
       />
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <h2 className="font-heading text-2xl font-semibold text-navy">{site.name}</h2>
+          <div className="min-w-0">
+            <h2 className="font-heading text-2xl font-semibold text-pretty text-navy">{site.name}</h2>
             <p className="mt-2 text-muted">
               {site.founder.title}: {site.founder.name}
             </p>
@@ -48,12 +48,12 @@ export default async function ContactPage({
                 </p>
               ))}
               <p>
-                <a href={`mailto:${site.email}`} className="font-medium text-blue hover:text-blue-700">
+                <a href={`mailto:${site.email}`} className="break-all font-medium text-blue hover:text-blue-700">
                   {site.email}
                 </a>
               </p>
               <p>
-                <a href={site.url} className="font-medium text-blue hover:text-blue-700">
+                <a href={site.url} className="break-all font-medium text-blue hover:text-blue-700">
                   {site.url.replace("https://", "")}
                 </a>
               </p>
@@ -62,7 +62,7 @@ export default async function ContactPage({
               <iframe
                 title="Tirunova Technologies location"
                 src={site.mapEmbed}
-                className="h-64 w-full"
+                className="h-56 w-full max-w-full sm:h-72"
                 loading="lazy"
               />
             </div>

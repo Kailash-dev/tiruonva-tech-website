@@ -20,14 +20,14 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="border-y border-line bg-surface py-16 sm:py-20">
+      <section className="border-y border-line bg-surface py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <SectionHeading
             eyebrow="Introduction"
             title="Technology That Works. Security You Can Trust."
             description="Tirunova Technologies is a technology solutions company providing end-to-end IT infrastructure, networking, cybersecurity, surveillance, software, cloud, security systems and solar solutions. Our focus is simple — quality products, professional installation, reliable support and long-term customer relationships."
           />
-          <div>
+          <div className="min-w-0">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
               Our approach
             </p>
@@ -35,7 +35,7 @@ export default function HomePage() {
               {approach.map((step, index) => (
                 <span
                   key={step}
-                  className="rounded-full bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm"
+                  className="rounded-full bg-white px-3 py-2 text-sm font-medium text-navy shadow-sm sm:px-4"
                 >
                   {step}
                   {index < approach.length - 1 ? " →" : ""}
@@ -46,26 +46,26 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading
             eyebrow="Solutions"
             title="One technology partner. Eight focused practices."
             description="We position Tirunova as an integrated IT, security, software and solar company — with dedicated pages for each practice rather than a long product list on the homepage."
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
             {solutions.map((solution, index) => {
               const Icon = solutionIcons[index];
               return (
                 <Link
                   key={solution.slug}
                   href={`/solutions/${solution.slug}`}
-                  className="group rounded-3xl border border-line bg-white p-6 transition-shadow hover:shadow-lg"
+                  className="group min-w-0 rounded-3xl border border-line bg-white p-5 transition-shadow hover:shadow-lg sm:p-6"
                 >
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 text-blue">
                     <Icon className="h-6 w-6" />
                   </span>
-                  <h3 className="font-heading mt-5 text-xl font-semibold text-navy group-hover:text-blue">
+                  <h3 className="font-heading mt-5 text-xl font-semibold text-pretty text-navy group-hover:text-blue">
                     {solution.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-muted">{solution.headline}</p>
@@ -77,17 +77,17 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-navy py-16 text-white sm:py-20">
+      <section className="bg-navy py-12 text-white sm:py-16 lg:py-20">
         <Container>
           <SectionHeading
             eyebrow="Why Tirunova"
             title="Why choose Tirunova Technologies"
             light
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
             {whyChoose.map((item) => (
-              <article key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <h3 className="font-heading text-xl font-semibold">{item.title}</h3>
+              <article key={item.title} className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
+                <h3 className="font-heading text-xl font-semibold text-pretty">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-white/70">{item.description}</p>
               </article>
             ))}
@@ -95,16 +95,16 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading
             eyebrow="Industries"
             title="Industries we serve"
             description="Solutions designed around the operational needs of homes, businesses and institutions."
           />
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {industries.map((industry) => (
-              <article key={industry.name} className="rounded-2xl border border-line bg-surface p-5">
+              <article key={industry.name} className="min-w-0 rounded-2xl border border-line bg-surface p-5">
                 <h3 className="font-heading text-base font-semibold text-navy">{industry.name}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{industry.description}</p>
               </article>
@@ -113,15 +113,15 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="border-y border-line bg-surface py-16 sm:py-20">
+      <section className="border-y border-line bg-surface py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading
             eyebrow="Process"
             title="A clear path from first conversation to ongoing support"
           />
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {processSteps.map((step) => (
-              <article key={step.number} className="rounded-3xl bg-white p-6">
+              <article key={step.number} className="min-w-0 rounded-3xl bg-white p-5 sm:p-6">
                 <p className="text-sm font-semibold tracking-[0.18em] text-orange">{step.number}</p>
                 <h3 className="font-heading mt-3 text-xl font-semibold text-navy">{step.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{step.description}</p>
@@ -131,12 +131,12 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-16 lg:py-20">
         <Container>
           <SectionHeading eyebrow="Client benefits" title="What customers gain" />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {benefits.map((item) => (
-              <article key={item.title} className="border-t-2 border-orange pt-4">
+              <article key={item.title} className="min-w-0 border-t-2 border-orange pt-4">
                 <h3 className="font-heading text-lg font-semibold text-navy">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-muted">{item.description}</p>
               </article>

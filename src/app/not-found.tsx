@@ -10,7 +10,7 @@ export default function NotFoundPage() {
         <p className="mx-auto mt-4 max-w-md text-muted">
           The page you requested does not exist. Return home or send an enquiry and we will help.
         </p>
-        <div className="mt-8 flex justify-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button href="/">Back to home</Button>
           <Button href="/contact" variant="outline">
             Contact

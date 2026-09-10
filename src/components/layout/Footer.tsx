@@ -26,14 +26,14 @@ const serviceLinks = [
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-12 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Image
             src="/logo.jpg"
             alt={site.name}
             width={1024}
             height={1024}
-            className="h-24 w-24 rounded-2xl bg-white object-contain p-1"
+            className="h-20 w-20 rounded-2xl bg-white object-contain p-1 sm:h-24 sm:w-24"
           />
           <p className="mt-5 font-heading text-lg font-semibold">{site.name}</p>
           <p className="mt-2 text-sm text-orange-500">{site.tagline}</p>
@@ -106,7 +106,7 @@ export function Footer() {
           </ul>
         </div>
       </Container>
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10 pb-[env(safe-area-inset-bottom)]">
         <Container className="flex flex-col gap-2 py-5 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {site.name}. All Rights Reserved.</p>
           <p>{site.founder.title}: {site.founder.name}</p>
