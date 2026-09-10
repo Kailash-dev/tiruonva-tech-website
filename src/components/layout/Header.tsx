@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { navigation, site } from "@/content/site";
 import { solutions } from "@/content/solutions";
 import { cn } from "@/lib/cn";
+import { publicAsset } from "@/lib/paths";
 
 export function Header() {
   const pathname = usePathname();
@@ -53,7 +54,7 @@ export function Header() {
       <Container className="flex items-center justify-between gap-3 py-2 sm:gap-4 sm:py-2.5 xl:gap-6 xl:py-3">
         <Link href="/" className="shrink-0" aria-label={`${site.name} home`}>
           <Image
-            src="/logo.jpg"
+            src={publicAsset("/logo.jpg")}
             alt={site.name}
             width={1024}
             height={1024}

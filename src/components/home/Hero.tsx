@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/content/site";
+import { publicAsset } from "@/lib/paths";
 
 export function Hero() {
   return (
@@ -38,7 +39,7 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-[13rem] sm:max-w-xs lg:max-w-md">
           <Image
-            src="/logo.jpg"
+            src={publicAsset("/logo.jpg")}
             alt={`${site.name} logo`}
             width={1024}
             height={1024}

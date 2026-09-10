@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { site } from "@/content/site";
+import { publicAsset } from "@/lib/paths";
 import "./globals.css";
 
 const heading = Plus_Jakarta_Sans({
@@ -44,13 +45,13 @@ export const metadata: Metadata = {
     description: site.descriptor,
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/logo.jpg", width: 1024, height: 1024, alt: site.name }],
+    images: [{ url: publicAsset("/logo.jpg"), width: 1024, height: 1024, alt: site.name }],
     locale: "en_IN",
     type: "website",
   },
   icons: {
-    icon: "/logo.jpg",
-    apple: "/logo.jpg",
+    icon: publicAsset("/logo.jpg"),
+    apple: publicAsset("/logo.jpg"),
   },
 };
 

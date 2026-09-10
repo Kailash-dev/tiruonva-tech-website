@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/content/site";
 import { solutions } from "@/content/solutions";
+import { publicAsset } from "@/lib/paths";
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -29,7 +30,7 @@ export function Footer() {
       <Container className="grid gap-12 py-12 sm:py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Image
-            src="/logo.jpg"
+            src={publicAsset("/logo.jpg")}
             alt={site.name}
             width={1024}
             height={1024}
