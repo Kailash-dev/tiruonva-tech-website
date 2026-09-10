@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
@@ -10,20 +11,15 @@ export const metadata: Metadata = {
     "Contact Tirunova Technologies in Jaipur for a free consultation and site survey. Call, email or send an enquiry.",
 };
 
-const intentMap: Record<string, string> = {
-  quote: "Request a Quote",
-  cctv: "CCTV & Smart Surveillance",
-  solar: "Solar Energy Solutions",
-};
+function FormFallback() {
+  return (
+    <div className="rounded-3xl border border-line bg-white p-6 sm:p-8">
+      <p className="text-sm text-muted">Loading enquiry form…</p>
+    </div>
+  );
+}
 
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ intent?: string }>;
-}) {
-  const { intent } = await searchParams;
-  const defaultRequirement = intent ? intentMap[intent] ?? "" : "";
-
+export default function ContactPage() {
   return (
     <>
       <PageHero
@@ -67,7 +63,9 @@ export default async function ContactPage({
               />
             </div>
           </div>
-          <ContactForm defaultRequirement={defaultRequirement} />
+          <Suspense fallback={<FormFallback />}>
+            <ContactForm />
+          </Suspense>
         </Container>
       </section>
     </>

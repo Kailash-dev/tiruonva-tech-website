@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { site } from "@/content/site";
 
 const requirements = [
@@ -17,6 +18,12 @@ const requirements = [
   "Request a Quote",
   "Other",
 ];
+
+const intentMap: Record<string, string> = {
+  quote: "Request a Quote",
+  cctv: "CCTV & Smart Surveillance",
+  solar: "Solar Energy Solutions",
+};
 
 type FormState = {
   name: string;
@@ -36,10 +43,12 @@ const emptyForm: FormState = {
   message: "",
 };
 
-export function ContactForm({ defaultRequirement = "" }: { defaultRequirement?: string }) {
+export function ContactForm() {
+  const searchParams = useSearchParams();
+  const intent = searchParams.get("intent") ?? "";
   const [form, setForm] = useState<FormState>({
     ...emptyForm,
-    requirement: defaultRequirement,
+    requirement: intentMap[intent] ?? "",
   });
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
