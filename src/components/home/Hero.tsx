@@ -37,14 +37,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[13rem] sm:max-w-xs lg:max-w-md">
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-3xl bg-surface-2">
           <Image
-            src={publicAsset("/logo.jpg")}
-            alt={`${site.name} logo`}
-            width={1024}
-            height={1024}
+            src={publicAsset("/images/home/hero.jpg")}
+            alt="Tirunova technicians installing networking and security systems"
+            fill
             priority
-            className="h-auto w-full object-contain"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
           />
         </div>
       </Container>

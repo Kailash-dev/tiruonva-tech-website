@@ -1,5 +1,6 @@
 export type Solution = {
   slug: string;
+  image: string;
   name: string;
   menuLabel: string;
   eyebrow: string;
@@ -15,6 +16,7 @@ export type Solution = {
 export const solutions: Solution[] = [
   {
     slug: "it-networking",
+    image: "/images/solutions/networking.jpg",
     name: "IT & Networking Solutions",
     menuLabel: "IT & Networking",
     eyebrow: "Connectivity",
@@ -42,6 +44,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "cctv-surveillance",
+    image: "/images/solutions/cctv.jpg",
     name: "CCTV & Smart Surveillance",
     menuLabel: "CCTV & Smart Surveillance",
     eyebrow: "Surveillance",
@@ -69,6 +72,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "security-access-control",
+    image: "/images/solutions/access-control.jpg",
     name: "Security & Access Control",
     menuLabel: "Security & Access Control",
     eyebrow: "Physical Security",
@@ -93,6 +97,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "cloud-computing",
+    image: "/images/solutions/cloud.jpg",
     name: "Cloud Computing",
     menuLabel: "Cloud Computing",
     eyebrow: "Cloud",
@@ -113,6 +118,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "cybersecurity",
+    image: "/images/solutions/cybersecurity.jpg",
     name: "Cybersecurity",
     menuLabel: "Cybersecurity",
     eyebrow: "Cyber Defence",
@@ -134,6 +140,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "website-app-development",
+    image: "/images/solutions/web-apps.jpg",
     name: "Website & Application Development",
     menuLabel: "Website & App Development",
     eyebrow: "Digital Presence",
@@ -159,6 +166,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "software-solutions",
+    image: "/images/solutions/software.jpg",
     name: "Software Solutions",
     menuLabel: "Software Solutions",
     eyebrow: "Business Software",
@@ -179,6 +187,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "solar-energy",
+    image: "/images/solutions/solar.jpg",
     name: "Solar Energy Solutions",
     menuLabel: "Solar Energy Solutions",
     eyebrow: "Clean Energy",
@@ -203,6 +212,7 @@ export const solutions: Solution[] = [
   },
   {
     slug: "it-consultancy",
+    image: "/images/solutions/consultancy.jpg",
     name: "IT Consultancy",
     menuLabel: "IT Consultancy",
     eyebrow: "Advisory",

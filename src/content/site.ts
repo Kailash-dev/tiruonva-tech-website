@@ -52,41 +52,53 @@ export const values = [
 ] as const;
 
 export const processSteps = [
-  { number: "01", title: "Consultation", description: "Understand your requirements." },
+  {
+    number: "01",
+    title: "Consultation",
+    description: "Understand your requirements.",
+    image: "/images/process/consultation.jpg",
+  },
   {
     number: "02",
     title: "Site Survey",
     description: "Analyse the existing infrastructure and requirements.",
+    image: "/images/process/site-survey.jpg",
   },
   {
     number: "03",
     title: "Solution Design",
     description: "Prepare the appropriate technical solution.",
+    image: "/images/process/design.jpg",
   },
   {
     number: "04",
     title: "Quotation",
     description: "Provide a transparent commercial proposal.",
+    image: "/images/process/quotation.jpg",
   },
   {
     number: "05",
     title: "Installation",
     description: "Professional implementation by our technical team.",
+    image: "/images/services/installation.jpg",
   },
   {
     number: "06",
     title: "Configuration",
     description: "Configure and test the complete system.",
+    image: "/images/services/configuration.jpg",
   },
   {
     number: "07",
     title: "Handover",
     description: "System demonstration and customer handover.",
+    image: "/images/process/handover.jpg",
   },
   {
     number: "08",
     title: "Support",
     description: "Continued technical assistance and AMC.",
+    image: "/images/services/support.jpg",
   },
 ] as const;
 
@@ -94,30 +106,36 @@ export const whyChoose = [
   {
     title: "One Technology Partner",
     description: "IT + Networking + Security + Software + Cloud + Solar.",
+    image: "/images/why/partner.jpg",
   },
   {
     title: "Professional Team",
     description:
       "Experienced technical support for installation, configuration and maintenance.",
+    image: "/images/why/team.jpg",
   },
   {
     title: "Quality Products",
     description:
       "Solutions selected according to customer requirements, performance and budget.",
+    image: "/images/why/products.jpg",
   },
   {
     title: "Customized Solutions",
     description: "We don't believe in one-size-fits-all technology.",
+    image: "/images/why/custom.jpg",
   },
   {
     title: "End-to-End Support",
     description:
       "From consultation and installation to maintenance and technical support.",
+    image: "/images/why/support.jpg",
   },
   {
     title: "Business-Focused Approach",
     description:
       "Solutions designed around reliability, security, scalability and business continuity.",
+    image: "/images/why/business.jpg",
   },
 ] as const;
 
@@ -145,16 +163,56 @@ export const benefits = [
 ] as const;
 
 export const industries = [
-  { name: "Homes & Residences", description: "Smart, secure and connected living." },
-  { name: "Corporate Offices", description: "Reliable networks, security and workplace IT." },
-  { name: "Hotels & Resorts", description: "Guest Wi-Fi, surveillance and operations technology." },
-  { name: "Hospitals & Healthcare", description: "Secure connectivity and monitored facilities." },
-  { name: "Schools & Institutions", description: "Campus networking, CCTV and digital systems." },
-  { name: "Industries & Manufacturing", description: "Plant connectivity, security and solar." },
-  { name: "Retail & Showrooms", description: "Surveillance, billing and store networking." },
-  { name: "Residential Projects", description: "Society-level security, intercom and Wi-Fi." },
-  { name: "Construction Projects", description: "Temporary and permanent site technology." },
-  { name: "Commercial Buildings", description: "Integrated infrastructure for multi-tenant sites." },
+  {
+    name: "Homes & Residences",
+    description: "Smart, secure and connected living.",
+    image: "/images/industries/homes.jpg",
+  },
+  {
+    name: "Corporate Offices",
+    description: "Reliable networks, security and workplace IT.",
+    image: "/images/industries/offices.jpg",
+  },
+  {
+    name: "Hotels & Resorts",
+    description: "Guest Wi-Fi, surveillance and operations technology.",
+    image: "/images/industries/hotels.jpg",
+  },
+  {
+    name: "Hospitals & Healthcare",
+    description: "Secure connectivity and monitored facilities.",
+    image: "/images/industries/hospitals.jpg",
+  },
+  {
+    name: "Schools & Institutions",
+    description: "Campus networking, CCTV and digital systems.",
+    image: "/images/industries/schools.jpg",
+  },
+  {
+    name: "Industries & Manufacturing",
+    description: "Plant connectivity, security and solar.",
+    image: "/images/industries/manufacturing.jpg",
+  },
+  {
+    name: "Retail & Showrooms",
+    description: "Surveillance, billing and store networking.",
+    image: "/images/industries/retail.jpg",
+  },
+  {
+    name: "Residential Projects",
+    description: "Society-level security, intercom and Wi-Fi.",
+    image: "/images/industries/residential.jpg",
+  },
+  {
+    name: "Construction Projects",
+    description: "Temporary and permanent site technology.",
+    image: "/images/industries/construction.jpg",
+  },
+  {
+    name: "Commercial Buildings",
+    description: "Integrated infrastructure for multi-tenant sites.",
+    image: "/images/industries/commercial.jpg",
+  },
 ] as const;
 
 export const oemPartners = [
@@ -187,14 +245,14 @@ export const approach = [
 ] as const;
 
 export const projectCategories = [
-  "CCTV Projects",
-  "Networking Projects",
-  "WiFi Projects",
-  "Server Projects",
-  "Cybersecurity Projects",
-  "Solar Projects",
-  "Access Control",
-  "EPABX Projects",
-  "Software Projects",
-  "Website & Application Projects",
+  { name: "CCTV Projects", image: "/images/solutions/cctv.jpg" },
+  { name: "Networking Projects", image: "/images/solutions/networking.jpg" },
+  { name: "WiFi Projects", image: "/images/solutions/wifi.jpg" },
+  { name: "Server Projects", image: "/images/services/configuration.jpg" },
+  { name: "Cybersecurity Projects", image: "/images/solutions/cybersecurity.jpg" },
+  { name: "Solar Projects", image: "/images/solutions/solar.jpg" },
+  { name: "Access Control", image: "/images/solutions/access-control.jpg" },
+  { name: "EPABX Projects", image: "/images/products/communication.jpg" },
+  { name: "Software Projects", image: "/images/solutions/software.jpg" },
+  { name: "Website & Application Projects", image: "/images/solutions/web-apps.jpg" },
 ] as const;

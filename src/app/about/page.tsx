@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/ui/CtaBanner";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { WhyChooseCard } from "@/components/ui/WhyChooseCard";
 import { approach, site, values, whyChoose } from "@/content/site";
 import { publicAsset } from "@/lib/paths";
 
@@ -20,6 +21,7 @@ export default function AboutPage() {
         eyebrow="About us"
         title="About Tirunova Technologies"
         description="Founded on 7 June 2024 by Deependra Gadwal, Tirunova Technologies was established with a vision to provide businesses and individuals with dependable, integrated and future-ready technology solutions."
+        image="/images/pages/about.jpg"
       />
 
       <section className="py-12 sm:py-16 lg:py-20">
@@ -123,10 +125,7 @@ export default function AboutPage() {
           <SectionHeading eyebrow="Strengths" title="Why Tirunova Technologies" />
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {whyChoose.map((item) => (
-              <article key={item.title} className="rounded-3xl border border-line p-6">
-                <h3 className="font-heading text-xl font-semibold text-navy">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-muted">{item.description}</p>
-              </article>
+              <WhyChooseCard key={item.title} {...item} light />
             ))}
           </div>
         </Container>

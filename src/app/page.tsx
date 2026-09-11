@@ -1,10 +1,11 @@
-import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
+import { SolutionCard } from "@/components/solutions/SolutionCard";
 import { Button } from "@/components/ui/Button";
+import { CardImage } from "@/components/ui/CardImage";
 import { Container } from "@/components/ui/Container";
 import { CtaBanner } from "@/components/ui/CtaBanner";
-import { solutionIcons } from "@/components/ui/Icons";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { WhyChooseCard } from "@/components/ui/WhyChooseCard";
 import {
   approach,
   benefits,
@@ -54,25 +55,13 @@ export default function HomePage() {
             description="We position Tirunova as an integrated IT, security, software and solar company — with dedicated pages for each practice rather than a long product list on the homepage."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
-            {solutions.map((solution, index) => {
-              const Icon = solutionIcons[index];
-              return (
-                <Link
-                  key={solution.slug}
-                  href={`/solutions/${solution.slug}`}
-                  className="group min-w-0 rounded-3xl border border-line bg-white p-5 transition-shadow hover:shadow-lg sm:p-6"
-                >
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 text-blue">
-                    <Icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="font-heading mt-5 text-xl font-semibold text-pretty text-navy group-hover:text-blue">
-                    {solution.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-muted">{solution.headline}</p>
-                  <p className="mt-4 text-sm font-semibold text-orange">{solution.cta} →</p>
-                </Link>
-              );
-            })}
+            {solutions.map((solution, index) => (
+              <SolutionCard
+                key={solution.slug}
+                solution={solution}
+                priority={index < 3}
+              />
+            ))}
           </div>
         </Container>
       </section>
@@ -86,10 +75,7 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-3">
             {whyChoose.map((item) => (
-              <article key={item.title} className="min-w-0 rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6">
-                <h3 className="font-heading text-xl font-semibold text-pretty">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/70">{item.description}</p>
-              </article>
+              <WhyChooseCard key={item.title} {...item} />
             ))}
           </div>
         </Container>
@@ -104,9 +90,19 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {industries.map((industry) => (
-              <article key={industry.name} className="min-w-0 rounded-2xl border border-line bg-surface p-5">
-                <h3 className="font-heading text-base font-semibold text-navy">{industry.name}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{industry.description}</p>
+              <article
+                key={industry.name}
+                className="min-w-0 overflow-hidden rounded-2xl border border-line bg-white"
+              >
+                <CardImage
+                  src={industry.image}
+                  alt={industry.name}
+                  sizes="(min-width: 1280px) 20vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                />
+                <div className="p-4 sm:p-5">
+                  <h3 className="font-heading text-base font-semibold text-navy">{industry.name}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{industry.description}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -121,10 +117,20 @@ export default function HomePage() {
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {processSteps.map((step) => (
-              <article key={step.number} className="min-w-0 rounded-3xl bg-white p-5 sm:p-6">
-                <p className="text-sm font-semibold tracking-[0.18em] text-orange">{step.number}</p>
-                <h3 className="font-heading mt-3 text-xl font-semibold text-navy">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{step.description}</p>
+              <article
+                key={step.number}
+                className="min-w-0 overflow-hidden rounded-3xl bg-white"
+              >
+                <CardImage
+                  src={step.image}
+                  alt={step.title}
+                  sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+                />
+                <div className="p-5 sm:p-6">
+                  <p className="text-sm font-semibold tracking-[0.18em] text-orange">{step.number}</p>
+                  <h3 className="font-heading mt-3 text-xl font-semibold text-navy">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{step.description}</p>
+                </div>
               </article>
             ))}
           </div>

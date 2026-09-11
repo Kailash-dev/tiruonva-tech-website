@@ -26,6 +26,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's discuss your requirement"
         description="Get a free consultation and site survey. Tell us what you need and our team will help you plan the right solution."
+        image="/images/pages/contact.jpg"
       />
       <section className="py-12 sm:py-16 lg:py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
