@@ -63,7 +63,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 30vw, 100vw"
-                        className="object-cover"
+                        className="h-full w-full max-w-none object-cover"
                       />
                     </div>
                     <p className="text-lg font-medium group-hover:text-orange-500">{item.name}</p>

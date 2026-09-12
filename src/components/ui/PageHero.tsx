@@ -42,7 +42,7 @@ export function PageHero({
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="h-full w-full max-w-none object-cover"
             />
           </div>
         ) : null}

@@ -23,7 +23,7 @@ export function CardImage({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        className="h-full w-full max-w-none object-cover"
       />
     </div>
   );
